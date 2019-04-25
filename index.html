@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>signUpIn</title>
+    <meta name="author" content="Amar Kawale">
+
+    <!-- bootstrap4 minified css cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- jquery slim minified js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- popper minified js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <!-- bootstrap4 minified js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./JS/main.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+        <div class="row formRow m-0">
+            <div id="signIn" class="col-lg-6 d-flex justify-content-center align-items-center">
+                <div class="content text-center">
+                    <h1 class="">Sign in</h1>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>or use your account</p>
+                    <div class="form-group">
+                        <input id="my-signIn-email" placeholder="Email" class="form-control" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input id="my-signIn-pass" placeholder="Password" class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-link text-dark border-0 w-100">Forgot your password?</button>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary sign-in text-uppercase" type="submit">sign in</button>
+                    </div>
+                </div>
+            </div>
+            <div id="signUp" class="col-lg-6 d-flex justify-content-center align-items-center order-1">
+                <div class="content text-center">
+                    <h1 class="">Create account</h1>
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p>or use your email for registration</p>
+                    <div class="form-group">
+                        <input id="my-signUp-name" placeholder="Name" class="form-control" type="text">
+                    </div>
+                    <div class="form-group">
+                        <input id="my-signUp-email" placeholder="Email" class="form-control" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input id="my-signUp-pass" placeholder="Password" class="form-control" type="password">
+                    </div>
+                    <div class="form-group">
+                        <button id="signUpBtn" class="btn btn-primary sign-in text-uppercase" type="submit">sign
+                            up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row overlayRow m-0">
+            <div class="overlay">
+                <div id="signInOverlay" class="col-lg-6 d-flex justify-content-center align-items-center overlay-col">
+                    <div class="overlay-content text-center">
+                        <h1 class="mb-4">Welcome Back!</h1>
+                        <p class="mb-4">To keep connected with us please login with your personal info</p>
+                        <button id="signIpOverlayBtn" type="submit"
+                            class="sign-in btn btn-outline-light text-uppercase">sign in</button>
+                    </div>
+                </div>
+                <div id="signUpOverlay" class="col-lg-6 d-flex justify-content-center align-items-center overlay-col">
+                    <div class="overlay-content text-center">
+                        <h1 class="mb-4">Hello, Friend!</h1>
+                        <p class="mb-4">Enter your personal details and start journey with us</p>
+                        <button id="signUpOverlayBtn" type="submit"
+                            class="sign-in btn btn-outline-light text-uppercase">sign up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
