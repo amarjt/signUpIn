@@ -34,21 +34,19 @@ body {
 
         @mixin formStyle {
             position: absolute;
-            left: 0;
+            left: 0vw;
             background: #fff;
         }
 
         #signIn {
             @include formStyle();
-            z-index: 4;
+            z-index: 1;
             transition: all 400ms ease;
         }
 
         #signUp {
             @include formStyle();
-            z-index: 1;
             transition: all 400ms ease;
-            opacity: .5;
         }
     }
 
@@ -108,18 +106,14 @@ body {
         color: #fff;
         position: absolute;
         top: 0;
-        left: 0;
-        width: 200vw;
+        left: 50vw;
+        width: 100vw;
         height: 100vh;
         @include linear-primary();
     }
 
     .overlayRow {
-        // overflow: hidden;
         width: 50vw;
-        // top: 0;
-        // left: 0;
-        // position: relative;
 
         .overlay {
             width: 100vw;
@@ -128,38 +122,29 @@ body {
             position: absolute;
             top: 0;
             left: 0;
-            transition: all 400ms ease;
-            @include linear-primary();
         }
     }
 
     #signInOverlay {
         @include overlay-style();
         transition: all 400ms ease;
-        z-index: 2;
-        width: 100vw;
-        left: 0;
 
-        .overlay-content {
-            opacity: 1;
+        .overlay-content{
+            margin-left: -70rem;
         }
     }
 
     #signUpOverlay {
-        transition: all 400ms ease;
         @include overlay-style();
-        z-index: 3;
-        width: 100vw;
-        left: 50%;
-
-        .overlay-content {
-            opacity: 1;
-        }
+        transition: all 400ms ease;
+        z-index: 1; 
+        background: linear-gradient(-45deg, $primary, $secondary) !important;
     }
 
     .overlay-content {
         width: 75%;
-        transition: all 400ms ease;
+        position: absolute;
+        transition: all 500ms ease-in-out;
 
         h1 {
             font-size: 4rem;

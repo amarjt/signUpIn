@@ -29,21 +29,19 @@ body .formRow {
 
 body .formRow #signIn {
   position: absolute;
-  left: 0;
+  left: 0vw;
   background: #fff;
-  z-index: 4;
+  z-index: 1;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
 }
 
 body .formRow #signUp {
   position: absolute;
-  left: 0;
+  left: 0vw;
   background: #fff;
-  z-index: 1;
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
-  opacity: .5;
 }
 
 body .col-lg-6 {
@@ -106,53 +104,43 @@ body .overlayRow .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
 }
 
 body #signInOverlay {
   color: #fff;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 200vw;
+  left: 50vw;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
-  z-index: 2;
-  width: 100vw;
-  left: 0;
 }
 
 body #signInOverlay .overlay-content {
-  opacity: 1;
+  margin-left: -70rem;
 }
 
 body #signUpOverlay {
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
   color: #fff;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 200vw;
+  left: 50vw;
+  width: 100vw;
   height: 100vh;
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
-  z-index: 3;
-  width: 100vw;
-  left: 50%;
-}
-
-body #signUpOverlay .overlay-content {
-  opacity: 1;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  z-index: 1;
+  background: linear-gradient(-45deg, #ff416c, #ff4b2b) !important;
 }
 
 body .overlay-content {
   width: 75%;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
+  position: absolute;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
 
 body .overlay-content h1 {
