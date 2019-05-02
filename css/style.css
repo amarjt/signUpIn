@@ -27,25 +27,37 @@ body .formRow {
   height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  body .formRow {
+    height: 70vh;
+  }
+}
+
 body .formRow #signIn {
   position: absolute;
   left: 0vw;
   background: #fff;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
   z-index: 1;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
 }
 
 body .formRow #signUp {
   position: absolute;
   left: 0vw;
   background: #fff;
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
 }
 
 body .col-lg-6 {
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  body .col-lg-6 {
+    height: 70%;
+  }
 }
 
 body .col-lg-6 .content h1 {
@@ -106,34 +118,68 @@ body .overlayRow .overlay {
   left: 0;
 }
 
+@media screen and (max-width: 768px) {
+  body .overlayRow .overlay {
+    height: 30vh;
+    top: unset;
+    bottom: 0;
+    overflow: unset;
+  }
+}
+
 body #signInOverlay {
   color: #fff;
   position: absolute;
-  top: 0;
+  top: 0vh;
   left: 50vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+@media screen and (max-width: 768px) {
+  body #signInOverlay {
+    height: 100%;
+    left: unset;
+    bottom: 0;
+    top: unset;
+  }
 }
 
 body #signInOverlay .overlay-content {
   margin-left: -70rem;
 }
 
+@media screen and (max-width: 768px) {
+  body #signInOverlay .overlay-content {
+    margin-left: 0rem;
+    margin-top: -30rem;
+  }
+}
+
 body #signUpOverlay {
   color: #fff;
   position: absolute;
-  top: 0;
+  top: 0vh;
   left: 50vw;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
   -webkit-transition: all 400ms ease;
   transition: all 400ms ease;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
   z-index: 1;
   background: linear-gradient(-45deg, #ff416c, #ff4b2b) !important;
+}
+
+@media screen and (max-width: 768px) {
+  body #signUpOverlay {
+    height: 100%;
+    left: unset;
+    bottom: 0;
+    top: unset;
+  }
 }
 
 body .overlay-content {
@@ -141,6 +187,20 @@ body .overlay-content {
   position: absolute;
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  body .overlay-content p,
+  body .overlay-content h1 {
+    margin-bottom: 12px !important;
+  }
+  body .overlay-content p {
+    font-size: unset !important;
+    line-height: 1.5;
+  }
+  body .overlay-content h1 {
+    font-size: 2rem !important;
+  }
 }
 
 body .overlay-content h1 {

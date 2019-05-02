@@ -32,21 +32,25 @@ body {
     .formRow {
         height: 100vh;
 
+
+        @media screen and (max-width: 768px) {
+            height: 70vh;
+        }
+
         @mixin formStyle {
             position: absolute;
             left: 0vw;
             background: #fff;
+            transition: all 500ms ease;
         }
 
         #signIn {
             @include formStyle();
             z-index: 1;
-            transition: all 400ms ease;
         }
 
         #signUp {
             @include formStyle();
-            transition: all 400ms ease;
         }
     }
 
@@ -55,8 +59,12 @@ body {
     .col-lg-6 {
         height: 100vh;
 
-        .content {
 
+        @media screen and (max-width: 768px) {
+            height: 70%;
+        }
+
+        .content {
 
             h1 {
                 font-size: 3rem;
@@ -95,21 +103,27 @@ body {
                         box-shadow: unset;
                     }
                 }
-
             }
-
-
         }
     }
 
     @mixin overlay-style {
         color: #fff;
         position: absolute;
-        top: 0;
+        top: 0vh;
         left: 50vw;
         width: 100vw;
         height: 100vh;
+        transition: all 400ms ease;
         @include linear-primary();
+
+
+        @media screen and (max-width: 768px) {
+            height: 100%;
+            left: unset;
+            bottom: 0;
+            top: unset;
+        }
     }
 
     .overlayRow {
@@ -122,22 +136,33 @@ body {
             position: absolute;
             top: 0;
             left: 0;
+
+
+            @media screen and (max-width: 768px) {
+                height: 30vh;
+                top: unset;
+                bottom: 0;
+                overflow: unset;
+            }
         }
     }
 
     #signInOverlay {
         @include overlay-style();
-        transition: all 400ms ease;
 
-        .overlay-content{
+        .overlay-content {
             margin-left: -70rem;
+
+            @media screen and (max-width: 768px) {
+                margin-left: 0rem;
+                margin-top: -30rem;
+            }
         }
     }
 
     #signUpOverlay {
         @include overlay-style();
-        transition: all 400ms ease;
-        z-index: 1; 
+        z-index: 1;
         background: linear-gradient(-45deg, $primary, $secondary) !important;
     }
 
@@ -145,6 +170,23 @@ body {
         width: 75%;
         position: absolute;
         transition: all 500ms ease-in-out;
+
+
+        @media screen and (max-width: 768px) {
+            p,
+            h1 {
+                margin-bottom: 12px !important;
+            }
+
+            p {
+                font-size: unset !important;
+                line-height: 1.5;
+            }
+
+            h1 {
+                font-size: 2rem !important;
+            }
+        }
 
         h1 {
             font-size: 4rem;
