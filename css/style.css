@@ -27,9 +27,9 @@ body .formRow {
   height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body .formRow {
-    height: 70vh;
+    height: 65vh;
   }
 }
 
@@ -54,9 +54,9 @@ body .col-lg-6 {
   height: 100vh;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body .col-lg-6 {
-    height: 70%;
+    height: 65%;
   }
 }
 
@@ -64,6 +64,12 @@ body .col-lg-6 .content h1 {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  body .col-lg-6 .content h1 {
+    margin-bottom: 1rem;
+  }
 }
 
 body .col-lg-6 .content .social a {
@@ -90,6 +96,12 @@ body .col-lg-6 .content .social a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  body .col-lg-6 .content .social a {
+    margin-bottom: .5rem;
+  }
+}
+
 body .col-lg-6 .content .social a:hover {
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
   color: #fff;
@@ -98,6 +110,12 @@ body .col-lg-6 .content .social a:hover {
 body .col-lg-6 .content .form-group input {
   background: #efefef8a;
   width: 350px;
+}
+
+@media screen and (max-width: 320px) {
+  body .col-lg-6 .content .form-group input {
+    width: 300px;
+  }
 }
 
 body .col-lg-6 .content .form-group input:focus {
@@ -118,9 +136,9 @@ body .overlayRow .overlay {
   left: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body .overlayRow .overlay {
-    height: 30vh;
+    height: 35vh;
     top: unset;
     bottom: 0;
     overflow: unset;
@@ -139,7 +157,7 @@ body #signInOverlay {
   background: linear-gradient(45deg, #ff416c, #ff4b2b);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body #signInOverlay {
     height: 100%;
     left: unset;
@@ -152,7 +170,7 @@ body #signInOverlay .overlay-content {
   margin-left: -70rem;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 426px) {
   body #signInOverlay .overlay-content {
     margin-left: 0rem;
     margin-top: -30rem;
@@ -173,7 +191,7 @@ body #signUpOverlay {
   background: linear-gradient(-45deg, #ff416c, #ff4b2b) !important;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body #signUpOverlay {
     height: 100%;
     left: unset;
@@ -189,7 +207,7 @@ body .overlay-content {
   transition: all 500ms ease-in-out;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 426px) {
   body .overlay-content p,
   body .overlay-content h1 {
     margin-bottom: 12px !important;

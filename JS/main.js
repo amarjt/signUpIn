@@ -6,22 +6,22 @@ $(document).ready(function () {
         $("#signUpOverlayBtn").click(function (e) {
             e.preventDefault();
             $("#signIn").css({
-                "transform": "translateY(30vh)",
+                "transform": "translateY(35vh)",
             });
             $("#signUp").css({
                 "z-index": "1",
-                "transform": "translateY(30vh)",
+                "transform": "translateY(35vh)",
             });
             $("#signUpOverlay").css({
                 "z-index": "0",
-                "transform": "translateY(-70vh)",
+                "transform": "translateY(-65vh)",
             });
             $("#signUpOverlay .overlay-content").css({
                 "margin-top": "30rem",
             });
             $("#signInOverlay").css({
                 "z-index": "1",
-                "transform": "translateY(-70vh)",
+                "transform": "translateY(-65vh)",
             });
             $("#signInOverlay .overlay-content").css({
                 "margin-top": "0rem",

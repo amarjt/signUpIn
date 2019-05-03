@@ -1,6 +1,11 @@
 $primary: #ff416c;
 $secondary: #ff4b2b;
 
+//break points
+$sm-l: (max-width:426px); // #{$sm-l}
+$sm-s: (max-width:320px); // #{$sm-s}
+$tablet: (max-width:768px); // #{$tablet}
+
 @mixin linear-primary {
     background: linear-gradient(45deg, $primary, $secondary)
 }
@@ -33,8 +38,8 @@ body {
         height: 100vh;
 
 
-        @media screen and (max-width: 768px) {
-            height: 70vh;
+        @media #{$tablet} {
+            height: 65vh;
         }
 
         @mixin formStyle {
@@ -60,8 +65,8 @@ body {
         height: 100vh;
 
 
-        @media screen and (max-width: 768px) {
-            height: 70%;
+        @media #{$tablet} {
+            height: 65%;
         }
 
         .content {
@@ -70,6 +75,10 @@ body {
                 font-size: 3rem;
                 font-weight: 700;
                 margin-bottom: 1.5rem;
+
+                @media #{$tablet} {
+                    margin-bottom: 1rem;
+                }
             }
 
             .social {
@@ -87,6 +96,10 @@ body {
                     margin-bottom: 2rem;
                     text-decoration: none;
 
+                    @media screen and (max-width: 768px) {
+                        margin-bottom: .5rem;
+                    }
+
                     &:hover {
                         @include linear-primary();
                         color: #fff;
@@ -95,9 +108,14 @@ body {
             }
 
             .form-group {
+
                 input {
                     background: #efefef8a;
                     width: 350px;
+
+                    @media screen and (max-width: 320px) {
+                        width: 300px;
+                    }
 
                     &:focus {
                         box-shadow: unset;
@@ -118,7 +136,7 @@ body {
         @include linear-primary();
 
 
-        @media screen and (max-width: 768px) {
+        @media #{$tablet} {
             height: 100%;
             left: unset;
             bottom: 0;
@@ -138,8 +156,8 @@ body {
             left: 0;
 
 
-            @media screen and (max-width: 768px) {
-                height: 30vh;
+            @media #{$tablet} {
+                height: 35vh;
                 top: unset;
                 bottom: 0;
                 overflow: unset;
@@ -153,7 +171,7 @@ body {
         .overlay-content {
             margin-left: -70rem;
 
-            @media screen and (max-width: 768px) {
+            @media #{$sm-l} {
                 margin-left: 0rem;
                 margin-top: -30rem;
             }
@@ -172,7 +190,7 @@ body {
         transition: all 500ms ease-in-out;
 
 
-        @media screen and (max-width: 768px) {
+        @media #{$sm-l} {
             p,
             h1 {
                 margin-bottom: 12px !important;
