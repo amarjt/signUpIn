@@ -12,7 +12,12 @@ $tablet: (max-width:768px); // #{$tablet}
 
 body {
     color: #222;
-    font: 1rem/1.25 open sans;
+    font: 16px/1.25 open sans;
+
+    @media #{$sm-l} {
+        font-size: 14px;
+        line-height: .5;
+    }
 
     .btn-primary,
     .bg-primary {
@@ -36,7 +41,6 @@ body {
 
     .formRow {
         height: 100vh;
-
 
         @media #{$tablet} {
             height: 65vh;
@@ -78,6 +82,7 @@ body {
 
                 @media #{$tablet} {
                     margin-bottom: 1rem;
+                    font-size: 2rem;
                 }
             }
 
@@ -86,18 +91,19 @@ body {
                     color: #000;
                     border: 1px solid #ccc;
                     border-radius: 50%;
-                    width: 3rem;
-                    height: 3rem;
+                    width: 3em;
+                    height: 3em;
                     display: inline-flex;
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    margin: auto .75rem;
-                    margin-bottom: 2rem;
+                    margin: auto .75em;
+                    margin-bottom: 2em;
                     text-decoration: none;
 
-                    @media screen and (max-width: 768px) {
-                        margin-bottom: .5rem;
+                    @media #{$tablet} {
+                        margin-bottom: 1rem;
+                        font-size: .8rem;
                     }
 
                     &:hover {
@@ -113,13 +119,21 @@ body {
                     background: #efefef8a;
                     width: 350px;
 
-                    @media screen and (max-width: 320px) {
+                    @media #{$sm-s} {
+                        width: 250px;
+                    }
+
+                    @media #{$sm-l} {
                         width: 300px;
                     }
 
                     &:focus {
                         box-shadow: unset;
                     }
+                }
+
+                @media #{$sm-l} {
+                    margin-bottom: .5rem !important;
                 }
             }
         }
@@ -191,6 +205,7 @@ body {
 
 
         @media #{$sm-l} {
+
             p,
             h1 {
                 margin-bottom: 12px !important;
@@ -224,4 +239,9 @@ body {
             }
         }
     }
+
+    @media #{$sm-l} {
+        
+    }
+
 }
